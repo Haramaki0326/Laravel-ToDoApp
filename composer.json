@@ -16,6 +16,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.12",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
@@ -53,6 +54,8 @@
         ],
         "cs-check": "phpcs --standard=PSR12 --colors -p ./app/Http/Controllers ./app/Models",
         "cs-fix": "phpcbf --standard=PSR12 --colors -p ./app/Http/Controllers ./app/Models",
+        "fixer": "php-cs-fixer fix ./app -v --diff",
+        "fixer-list": "php-cs-fixer fix ./app -v --dry-run --diff ",
         "phpstan": "phpstan analyse --memory-limit=1G"
     },
     "extra": {
