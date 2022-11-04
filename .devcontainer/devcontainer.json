@@ -29,8 +29,34 @@
 	// "shutdownAction": "none",
 
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
-	"postCreateCommand": "apt update && apt install -y git"
+	"postCreateCommand": "apt update && apt install -y git",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
+
+	"extensions": [
+		"junstyle.php-cs-fixer",
+		"eamodio.gitlens",
+		"sanderronde.phpstan-vscode",
+		"mikestead.dotenv",
+		"dbaeumer.vscode-eslint",
+		"mhutchie.git-graph",
+		"donjayamanne.githistory",
+		"oderwat.indent-rainbow",
+		"onecentlin.laravel-blade",
+		"xdebug.php-debug",
+		"neilbrayfield.php-docblocker",
+		"esbenp.prettier-vscode",
+		"shufo.vscode-blade-formatter",
+		"mosapride.zenkaku",
+		"albert.TabOut",
+		"richie5um2.vscode-sort-json",
+		"christian-kohler.path-intellisense",
+		"codingyu.laravel-goto-view",
+		"ctf0.laravel-goto-controller",
+		"amiralizadeh9480.laravel-extra-intellisense",
+		"austenc.laravel-blade-spacer",
+		"ryannaddy.laravel-artisan",
+		"onecentlin.laravel5-snippets"
+	]	
 }
