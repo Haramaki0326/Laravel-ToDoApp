@@ -1,0 +1,5 @@
+# 接続先として、データベースの種類(`mysql`)、ユーザ名(`dbuser`)、パスワード(`dbpass`)、ホスト名(`localhost`)、ポート(`3306`)、データベース名(`dbname`)を以下のように記載します
+dsn: mysql://sail:password@localhost:3306/laravel_todoapp
+
+# ドキュメントのディレクトリを指定します
+docPath: doc/schema

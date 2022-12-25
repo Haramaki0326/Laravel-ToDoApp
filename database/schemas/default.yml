@@ -1,0 +1,74 @@
+users:
+  columns:
+    id: bigIncrements
+    first_name: string
+    last_name: string
+    first_name_furigana: string
+    last_name_furigana: string
+    age: integer
+    email:
+      type: string
+      unique:
+    rememberToken:
+    timestamps:
+
+products:
+  columns:
+    id: bigIncrements
+    name: string
+    price: integer
+    timestamps:
+
+orders:
+  columns:
+    id: bigIncrements
+    user_id: unsignedBigInteger
+    order_date: date
+    status: integer
+    total_price: integer
+    memo: string
+    timestamps:
+  foreign_keys:
+    - columns: user_id
+      references: id
+      table: users
+
+order_details:
+  columns:
+    id: bigIncrements
+    order_id: unsignedBigInteger
+    product_id: unsignedBigInteger
+    line_id: integer
+    quantity: integer
+    timestamps:
+  foreign_keys:
+    - columns: order_id
+      references: id
+      table: orders
+    - columns: product_id
+      references: id
+      table: products
+
+password_resets:
+  columns:
+    email:
+      type: string
+      index:
+    token: string
+    created_at:
+      type: timestamp
+      nullable:
+
+failed_jobs:
+  columns:
+    id:
+    uuid:
+      type: string
+      unique:
+    connection: text
+    queue: text
+    payload: longText
+    exception: longText
+    failed_at:
+      type: timestamp
+      useCurrent:

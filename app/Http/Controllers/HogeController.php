@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreHelloRequest;
-use App\Http\Requests\UpdateHelloRequest;
-use App\Models\Hello;
+use Illuminate\Http\Request;
 
-class HelloController extends Controller
+class HogeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +29,10 @@ class HelloController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHelloRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreHelloRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +40,10 @@ class HelloController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Hello  $hello
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Hello $hello)
+    public function show($id)
     {
         //
     }
@@ -53,10 +51,10 @@ class HelloController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Hello  $hello
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hello $hello)
+    public function edit($id)
     {
         //
     }
@@ -64,11 +62,11 @@ class HelloController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateHelloRequest  $request
-     * @param  \App\Models\Hello  $hello
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateHelloRequest $request, Hello $hello)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +74,10 @@ class HelloController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Hello  $hello
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hello $hello)
+    public function destroy($id)
     {
         //
     }
