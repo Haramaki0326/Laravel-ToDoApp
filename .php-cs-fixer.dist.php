@@ -1,16 +1,34 @@
 <?php
-/*
- * This document has been generated with
- * https://mlocati.github.io/php-cs-fixer-configurator/#version:3.1.0|configurator
- * you can change this configuration by importing this file.
- */
-$config = new PhpCsFixer\Config();
-return $config
-    ->setRules([
-        '@PSR12' => true,
+
+$rules = [
+    '@PSR12' => true,
+];
+
+$finder = PhpCsFixer\Finder::create()
+    ->in([
+        __DIR__,
+        // __DIR__.'/app',
+        // __DIR__.'/config',
+        // __DIR__.'/database',
+        // __DIR__.'/routes',
+        // __DIR__.'/tests',
     ])
-    ->setFinder(PhpCsFixer\Finder::create()
-        ->exclude('vendor')
-        ->in(__DIR__)
-    )
-;
+    ->exclude([
+        'vendor',
+        // 'app/Providers',
+        // 'app/Http/Middleware',
+        // 'app/Http/Kernel.php',
+        // 'config/app.php',
+        // 'config/database.php',
+        // 'config/logging.php',
+        // 'config/services.php',
+        // 'database/factories',
+        // 'database/seeds',
+        // 'tests/TestCase.php',
+    ]);
+
+$config = new PhpCsFixer\Config();
+
+return $config
+->setRules($rules)
+->setFinder($finder);
