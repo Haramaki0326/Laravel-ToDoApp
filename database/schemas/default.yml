@@ -1,11 +1,8 @@
 users:
   columns:
     id: bigIncrements
-    first_name: string
-    last_name: string
-    first_name_furigana: string
-    last_name_furigana: string
-    age: integer
+    name: string
+    password: string
     email:
       type: string
       unique:
